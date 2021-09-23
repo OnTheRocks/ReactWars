@@ -3,7 +3,7 @@ import ToDoItem from '../ToDoItem';
 
 function MyInfo() {
   return (
-    <div>
+    <div className="todo-list">
       <ToDoItem />
       <ToDoItem />
       <ToDoItem />
