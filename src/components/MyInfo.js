@@ -1,23 +1,15 @@
 import React from 'react';
+import ToDoItem from '../ToDoItem';
 
 function MyInfo() {
   return (
     <div>
-      <input type="checkbox" />
-      <p>Placholder text here.</p>
-      
-      <input type="checkbox" />
-      <p>Placholder text here.</p>
-
-      <input type="checkbox" />
-      <p>Placholder text here.</p>
-
-      <input type="checkbox" />
-      <p>Placholder text here.</p>
-      
-      <input type="checkbox" />
-      <p>Placholder text here.</p>
-
+      <ToDoItem />
+      <ToDoItem />
+      <ToDoItem />
+      <ToDoItem />
+      <ToDoItem />
+      <ToDoItem />
     </div>
   )
 }
