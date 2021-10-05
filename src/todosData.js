@@ -11,7 +11,7 @@ const todosData = [
   },
   {
       id: 3,
-      text: "Clean gecko tank",
+      text: "Clean Workshop",
       completed: false
   },
   {
@@ -21,7 +21,12 @@ const todosData = [
   },
   {
       id: 5,
-      text: "Catch up on Arrested Development",
+      text: "Catch up on Walking Dead",
+      completed: false
+  },
+  {
+      id: 5,
+      text: "Poker Tournament",
       completed: false
   }
 ]
