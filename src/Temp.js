@@ -1,38 +1,20 @@
 import React, { Component } from 'react'
 
 export default class Apple extends Component {
+  constructor() {
+    super()
+    this.state = {
+      name: "Big Nate",
+      age: "43"
+    }
+  }
   render() {
     return (
       <div>
-        <Header username="Big Nate" />
-        <Greeting />
+        <h1>{this.state.name}</h1>
+        <h3>{this.state.age} years old.</h3>
       </div>
     )
   }
 }
 
-class Header extends Component {
-  render(props) {
-    return (
-      <header><p>Welcome, {this.props.username}!</p></header>
-    )
-  }
-}
-
-class Greeting extends Component {
-  render() {
-    const date = new Date()
-    const hours = date.getHours()
-    let timeOfDay
-
-    if (hours > 1) {
-      timeOfDay = "morning"
-    } else if (hours >= 12 && hours < 17) {
-      timeOfDay = "afternoon"
-    } else {
-      timeOfDay = "night"
-    }return (
-      <h1>Good {timeOfDay} to you, sir or madam!</h1>
-    )
-    }
-  }
