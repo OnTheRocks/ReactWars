@@ -11,7 +11,7 @@ function App() {
     <div>
       <Header />
       {/* <Navbar /> */}
-      {/* <MyInfo /> */}
+      <MyInfo />
       {/* <Footer /> */}
       <Apple />
     </div>
