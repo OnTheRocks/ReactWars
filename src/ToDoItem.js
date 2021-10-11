@@ -5,7 +5,11 @@ const handleChange = () => {console.log("You CHANGED me!")}
 const ToDoItem = (props) => {
   return(
   <div className="todo-item">
-      <input type="checkbox"  checked={props.item.completed} onChange={handleChange}/>
+      <input 
+        type="checkbox"  
+        checked={props.item.completed} 
+        onChange={() => props.handleChange(props.item.id)}
+      />
       <p>{props.item.text}</p>
   </div>
 )}
