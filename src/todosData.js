@@ -12,7 +12,7 @@ const todosData = [
   {
       id: 3,
       text: "Clean Workshop",
-      completed: false
+      completed: true
   },
   {
       id: 4,
