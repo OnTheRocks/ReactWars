@@ -32,3 +32,5 @@ componentWillUnmount() {
 
 // https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
 // https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes
+// https://www.youtube.com/watch?v=DLX62G4lc44&t=7325s
+// https://scrimba.com/learn/learnreact/react-lifecycle-methods-part-1-cewQ2Sq
