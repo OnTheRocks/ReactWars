@@ -1,60 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default class Apple extends React.Component {
+export default class Apple extends Component {
   constructor() {
     super()
-    this.state = {
-      count: 0
-    }
-    this.handleClick = this.handleClick.bind(this)
-    this.handleClickDouble = this.handleClickDouble.bind(this)
-    this.handleClickS = this.handleClickS.bind(this)
-    this.handleClickH = this.handleClickH.bind(this)
+    this.state ={}
   }
 
-handleClick() {
-  console.log("You clicked me!")
-  this.setState(prevState => {
-    return {
-      count: prevState.count + 1
-    }
-  })
+componentDidMount() {
+        // GET the data I need to correctly display
 }
-handleClickDouble() {
-  console.log("You clicked me!")
-  this.setState(prevState => {
-    return {
-      count: prevState.count * 2
-    }
-  })  
+
+shouldComponentUpdate() {
+        // return true if want it to update
+        // return false if not
 }
-handleClickS() {
-  console.log("You clicked me!")
-  this.setState(prevState => {
-    return {
-      count: prevState.count * prevState.count
-    }
-  })  
-}
-handleClickH() {
-  console.log("You clicked me!")
-  this.setState(prevState => {
-    return {
-      count: prevState.count /2
-    }
-  })  
+
+componentWillUnmount() {
+        // teardown or cleanup your code before your component disappears
+        // (E.g. remove event listeners)
 }
 
   render() {
     return (
       <div>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.handleClick}>Change!</button>
-        <button onClick={this.handleClickDouble}>Double!</button>
-        <button onClick={this.handleClickS}>Suare!</button>
-        <button onClick={this.handleClickH}>Half!</button>
+        Code goes here.
       </div>
     )
   }
 }
 
+
+// https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
+// https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes

@@ -1,7 +1,5 @@
 import React from "react";
 
-const handleChange = () => {console.log("You CHANGED me!")}
-
 const ToDoItem = (props) => {
   return(
   <div className="todo-item">
