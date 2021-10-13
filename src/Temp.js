@@ -1,28 +1,29 @@
 import React, { Component } from 'react'
-import Conditional from "./Conditional"
 
 export default class Apple extends Component {
   constructor() {
     super()
-    this.state ={
-      isLoading: true
+    this.state = {
+      isLoggedIn: false
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
-componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false
-      })
-    }, 1500)
-}
-
+  handleClick() {
+    this.setState(prevState => {
+      return {
+        isLoggedIn: !prevState.isLoggedIn
+      }
+    })
+  }
+ 
   render() {
+    let btnTxt = this.state.isLoggedIn ? "Log Out" : "Log In"
+    let disTxt = this.state.isLoggedIn ? "Logged in" : "Logged Out"
     return (
       <div>
-        {this.state.isLoading ?
-        <h1>Loading...</h1> :
-        <Conditional/>}
+        <h1>{disTxt}</h1>
+        <button onClick={this.handleClick}>{btnTxt}</button>
       </div>
     )
   }
