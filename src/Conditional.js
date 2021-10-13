@@ -4,7 +4,7 @@ export default function Conditional(props) {
   console.log(props.isLoading)
   return (
     <div>
-     <h1>Nathan is da man!</h1>
+     <h1>Some cool stuff about conditional rendering</h1>
     </div>
   )
 }
