@@ -4,26 +4,29 @@ export default class Apple extends Component {
   constructor() {
     super()
     this.state = {
-      isLoggedIn: false
+      loading: false,
+      character: {}
     }
-    this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-    this.setState(prevState => {
-      return {
-        isLoggedIn: !prevState.isLoggedIn
-      }
+componentDidMount() {
+  this.setState({loading: true})
+  fetch("https://swapi.dev/api/people/2")
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        loading: false,
+        character: data
+      })
+
     })
-  }
- 
+}
+
   render() {
-    let btnTxt = this.state.isLoggedIn ? "Log Out" : "Log In"
-    let disTxt = this.state.isLoggedIn ? "Logged in" : "Logged Out"
+    const text = this.state.loading ? "Loading..." : this.state.character.name
     return (
       <div>
-        <h1>{disTxt}</h1>
-        <button onClick={this.handleClick}>{btnTxt}</button>
+        <h1>{text}</h1>
       </div>
     )
   }
