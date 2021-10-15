@@ -4,30 +4,29 @@ export default class Apple extends Component {
   constructor() {
     super()
     this.state = {
-      loading: false,
-      character: {}
+      firstName: ""
+      
     }
+    this.handleChange = this.handleChange.bind(this)
   }
 
-componentDidMount() {
-  this.setState({loading: true})
-  fetch("https://swapi.dev/api/people/2")
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        loading: false,
-        character: data
-      })
+  handleChange(event) {
 
+    this.setState({
+      [event.target.name]: event.target.value 
     })
-}
+  }
 
   render() {
-    const text = this.state.loading ? "Loading..." : this.state.character.name
+   
     return (
-      <div>
-        <h1>{text}</h1>
-      </div>
+      <form>
+        <input type="text" placeholder="First Name" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+       <br />
+        <input type="text" placeholder="Last Name" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
+        <h1>{this.state.firstName} {this.state.lastName}</h1>
+        <button type="submit">Submit</button>
+      </form>
     )
   }
 }
