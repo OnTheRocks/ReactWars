@@ -19,8 +19,7 @@ export default class Apple extends Component {
     type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
   }
 
-  render() {
-   
+  render() {   
     return (
       <form>
         <input 
@@ -32,8 +31,7 @@ export default class Apple extends Component {
         />
         <br />
         <input type="text" placeholder="Last Name" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
-        <h1>{this.state.firstName} {this.state.lastName}</h1>        
-   
+        <h1>{this.state.firstName} {this.state.lastName}</h1>       
         <textarea onChange={this.handleChange} value="Let's go Brandon!" />
         <br />
          <label>
@@ -65,7 +63,6 @@ export default class Apple extends Component {
         </label>
         <br />
         <br />
-
         <label>Favorite Band: </label>
         <select 
           onChange={this.handleChange}
@@ -83,10 +80,8 @@ export default class Apple extends Component {
         <br />
         <button>Submit</button>
         <br />
-
         <h2>You are a {this.state.gender}.</h2>
         <h2>You're favorite band is:  {this.state.favBand}</h2>
-
       </form>
     )
   }
