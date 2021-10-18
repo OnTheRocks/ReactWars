@@ -3,7 +3,7 @@ import Header from "./components/Header"
 // import Navbar from "./components/Navbar"
 // import MyInfo from "./components/MyInfo"
 // import Footer from "./components/Footer"
-import Apple from "./Temp"
+import Apple from "./Temp/Temp"
 
 
 function App() {
