@@ -4,6 +4,8 @@ import Header from "./components/Header"
 // import MyInfo from "./components/MyInfo"
 // import Footer from "./components/Footer"
 import Apple from "./Temp/Forms"
+import Test from "./Temp/Test"
+
 
 
 function App() {
@@ -13,7 +15,8 @@ function App() {
       {/* <Navbar /> */}
       {/* <MyInfo /> */}
       {/* <Footer /> */}
-      <Apple />
+      {/* <Apple /> */}
+      <Test />
     </div>
   )
 }
