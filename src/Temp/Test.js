@@ -1,23 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import randomcolor from "randomcolor"
+// import React, { useEffect, useState } from 'react'
+// import randomcolor from "randomcolor"
 
-const Test = () => {
-  const [count, setCount] = useState(1)
-  const [color, setColor] = useState("green")
+// const Test = () => {
+//   const [count, setCount] = useState(1)
+//   const [color, setColor] = useState("green")
 
-  useEffect (() => {
-    setColor(randomcolor())
-  }, [])
+//   useEffect (() => {
+//      setInterval(() => {
+//         setCount(prevCount => prevCount + 1)
+//         }, 1000)
+//   }, [])
 
-  return (
-    <div>
-      <h1 style={{color: color}}>{count}</h1>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment!</button>
-      <button onClick={() => setCount(prevCount => prevCount - 1)}>Decrement!</button>
-      <button onClick={() => setCount(prevCount => prevCount * 5)}>Multiply * 5!</button>
-      <button onClick={() => setCount(prevCount => prevCount / 5)}>Divide * 5!</button>
-    </div>
-  )
-}
+//   useEffect (() => {    
+//     setColor(randomcolor())
+//   }, [count])
 
-export default Test
+//   return (
+//     <div>
+//       <h1 style={{color: color}}>{count}</h1>
+//       <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment!</button>
+//       <button onClick={() => setCount(prevCount => prevCount - 1)}>Decrement!</button>
+//       <button onClick={() => setCount(prevCount => prevCount * 5)}>Multiply * 5!</button>
+//       <button onClick={() => setCount(prevCount => prevCount / 5)}>Divide * 5!</button>
+//     </div>
+//   )
+// }
+
+// export default Test
